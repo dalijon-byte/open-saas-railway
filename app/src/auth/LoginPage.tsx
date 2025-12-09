@@ -16,6 +16,8 @@ export default function Login() {
       await signup({
         email: guestEmail,
         password: guestPassword,
+        username: guestEmail,
+        isAdmin: false,
         isGuest: true,
       });
       // signup will automatically log in and redirect per onAuthSucceededRedirectTo
