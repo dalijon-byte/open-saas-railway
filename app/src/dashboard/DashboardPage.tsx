@@ -9,7 +9,7 @@ const DashboardPage = () => {
       <h1 className="text-2xl font-bold mb-4">Welcome to Dalisoft!</h1>
       {user && (
         <p>
-          Hello, {user.identities.google?.profile.name || user.email}!
+          Hello, {user.username || user.email}!
         </p>
       )}
     </div>
