@@ -1,9 +1,9 @@
-app OpenSaaS {
+app Dalisoft {
   wasp: {
     version: "^0.19.0"
   },
 
-  title: "My Open SaaS App",
+  title: "My Dalisoft App",
 
   head: [
     "<link rel='icon' href='/favicon.ico' />",
@@ -13,8 +13,8 @@ app OpenSaaS {
     "<meta name='keywords' content='saas, solution, product, app, service' />",
 
     "<meta property='og:type' content='website' />",
-    "<meta property='og:title' content='Your Open SaaS App' />",
-    "<meta property='og:site_name' content='Your Open SaaS App' />",
+    "<meta property='og:title' content='Your Dalisoft App' />",
+    "<meta property='og:site_name' content='Your Dalisoft App' />",
     "<meta property='og:url' content='https://your-saas-app.com' />",
     "<meta property='og:description' content='Your apps main description and features.' />",
     "<meta property='og:image' content='https://your-saas-app.com/public-banner.webp' />",
@@ -22,7 +22,7 @@ app OpenSaaS {
     "<meta name='twitter:image:width' content='800' />",
     "<meta name='twitter:image:height' content='400' />",
     "<meta name='twitter:card' content='summary_large_image' />",
-    // TODO: You can put your Plausible analytics scripts below (https://docs.opensaas.sh/guides/analytics/):
+    // TODO: You can put your Plausible analytics scripts below (https://docs.dalisoft.sh/guides/analytics/):
     // NOTE: Plausible does not use Cookies, so you can simply add the scripts here.
     // Google, on the other hand, does, so you must instead add the script dynamically
     // via the Cookie Consent component after the user clicks the "Accept" cookies button.
@@ -38,7 +38,7 @@ app OpenSaaS {
       //   (RequestPasswordReset(Route|Page), PasswordReset(Route|Page), EmailVerification(Route|Page))
       email: {
         fromField: {
-          name: "Open SaaS App",
+          name: "Dalisoft App",
           email: "me@example.com"
         },
         emailVerification: {
@@ -68,7 +68,7 @@ app OpenSaaS {
        }
     },
     onAuthFailedRedirectTo: "/login",
-    onAuthSucceededRedirectTo: "/demo-app",
+    onAuthSucceededRedirectTo: "/dashboard",
   },
 
   db: {
@@ -86,10 +86,10 @@ app OpenSaaS {
   emailSender: {
     // NOTE: "Dummy" provider is just for local development purposes.
     //   Make sure to check the server logs for the email confirmation url (it will not be sent to an address)!
-    //   Once you are ready for production, switch to e.g. "SendGrid" or "Mailgun" providers. Check out https://docs.opensaas.sh/guides/email-sending/ .
+    //   Once you are ready for production, switch to e.g. "SendGrid" or "Mailgun" providers. Check out https://docs.dalisoft.sh/guides/email-sending/ .
     provider: Mailgun,
     defaultFrom: {
-      name: "Open SaaS App",
+      name: "Dalisoft App",
       // When using a real provider, e.g. SendGrid, you must use the same email address that you configured your account to send out emails with!
       email: "me@example.com"
     },
@@ -99,6 +99,12 @@ app OpenSaaS {
 route LandingPageRoute { path: "/", to: LandingPage }
 page LandingPage {
   component: import LandingPage from "@src/landing-page/LandingPage"
+}
+
+route DashboardRoute { path: "/dashboard", to: DashboardPage }
+page DashboardPage {
+  authRequired: true,
+  component: import DashboardPage from "@src/dashboard/DashboardPage"
 }
 
 //#region Auth Pages
@@ -143,44 +149,6 @@ query getPaginatedUsers {
 action updateIsUserAdminById {
   fn: import { updateIsUserAdminById } from "@src/user/operations",
   entities: [User]
-}
-//#endregion
-
-//#region Demo AI App
-route DemoAppRoute { path: "/demo-app", to: DemoAppPage }
-page DemoAppPage {
-  authRequired: true,
-  component: import DemoAppPage from "@src/demo-ai-app/DemoAppPage"
-}
-
-action generateGptResponse {
-  fn: import { generateGptResponse } from "@src/demo-ai-app/operations",
-  entities: [User, Task, GptResponse]
-}
-
-action createTask {
-  fn: import { createTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-action deleteTask {
-  fn: import { deleteTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-action updateTask {
-  fn: import { updateTask } from "@src/demo-ai-app/operations",
-  entities: [Task]
-}
-
-query getGptResponses {
-  fn: import { getGptResponses } from "@src/demo-ai-app/operations",
-  entities: [User, GptResponse]
-}
-
-query getAllTasksByUser {
-  fn: import { getAllTasksByUser } from "@src/demo-ai-app/operations",
-  entities: [Task]
 }
 //#endregion
 

@@ -1,7 +1,7 @@
 {
   "name": "e2e-tests",
   "version": "1.0.0",
-  "description": "e2e-tests for opensaas.sh",
+  "description": "e2e-tests for dalisoft",
   "author": "",
   "license": "ISC",
   "main": "ci-start-app-and-db.js",

@@ -40,7 +40,7 @@ export const stripeWebhook: PaymentsWebhook = async (
     // If you'd like to handle more events, you can add more cases below.
     // When deploying your app, you configure your webhook in the Stripe dashboard
     // to only send the events that you're handling above.
-    // See: https://docs.opensaas.sh/guides/deploying/#setting-up-your-stripe-webhook
+    // See: https://docs.dalisoft.sh/guides/deploying/#setting-up-your-stripe-webhook
     switch (stripeEvent.type) {
       case "invoice.paid":
         await handleInvoicePaid(stripeEvent, prismaUserDelegate);
@@ -162,7 +162,7 @@ async function handleCustomerSubscriptionUpdated(
   const subscription = event.data.object;
 
   // There are other subscription statuses, such as `trialing` that we are not handling.
-  const subscriptionStatus = getOpenSaasSubscriptionStatus(subscription);
+  const subscriptionStatus = getDalisoftSubscriptionStatus(subscription);
   if (!subscriptionStatus) {
     return;
   }
@@ -187,7 +187,7 @@ async function handleCustomerSubscriptionUpdated(
   }
 }
 
-function getOpenSaasSubscriptionStatus(
+function getDalisoftSubscriptionStatus(
   subscription: Stripe.Subscription,
 ): SubscriptionStatus | undefined {
   if (subscription.status === SubscriptionStatus.Active) {

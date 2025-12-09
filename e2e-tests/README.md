@@ -1,14 +1,14 @@
-# Open SaaS e2e Tests with Playwright
+# Dalisoft e2e Tests with Playwright
 
-These are e2e tests that are written using [Playwright](https://playwright.dev/) for the Open SaaS project.
+These are e2e tests that are written using [Playwright](https://playwright.dev/) for the Dalisoft project.
 
-They not only serve as tests for development of the Open SaaS project, but also as reference examples for how you can implement tests for the app you build with Open SaaS as a template, if you choose to do so.
+They not only serve as tests for development of the Dalisoft project, but also as reference examples for how you can implement tests for the app you build with Dalisoft as a template, if you choose to do so.
 
 ## Running the tests
 
 ### Locally
 
-First, make sure you've [integrated Stripe into your app](https://docs.opensaas.sh/guides/stripe-integration/). This includes [installing the Stripe CLI and logging into it](https://docs.opensaas.sh/guides/stripe-testing/) with your Stripe account.
+First, make sure you've [integrated Stripe into your app](https://docs.dalisoft.sh/guides/stripe-integration/). This includes [installing the Stripe CLI and logging into it](https://docs.dalisoft.sh/guides/stripe-testing/) with your Stripe account.
 
 Next, Install the test dependencies:
 
@@ -57,7 +57,7 @@ To exit the local e2e tests, go back to the terminal were you started your tests
 
 ## CI/CD
 
-Although the Open SaaS template does not come with an example workflow, you can find one at `.github/workflows/e2e-tests.yml` of the [remote repo](https://github.com/wasp-lang/open-saas).
+Although the Dalisoft template does not come with an example workflow, you can find one at `.github/workflows/e2e-tests.yml` of the [remote repo](https://github.com/wasp-lang/open-saas).
 
 You can copy and paste the `.github/` directory containing the `e2e-tests.yml` workflow into the root of your own repository to run the tests as part of your CI pipeline.
 

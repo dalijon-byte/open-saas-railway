@@ -1,5 +1,5 @@
 {
-  "name": "opensaas",
+  "name": "dalisoft",
   "type": "module",
   "workspaces": [
     ".wasp/build/*",

@@ -1,8 +1,8 @@
-## Open SaaS x Railway Template 🐝 🛤
+## Dalisoft x Railway Template 🐝 🛤
 
 https://github.com/user-attachments/assets/3856276b-23e9-455e-a564-b5f26f4f0e98
 
-You've decided to build a SaaS app with the Open SaaS x Railway template. Great choice! 
+You've decided to build a SaaS app with the Dalisoft x Railway template. Great choice! 
 
 This template is:
 
@@ -11,16 +11,16 @@ This template is:
 3. is **pre-configured for instant Railway deployments**
 
 > [!WARNING]  
-> This is a special version of Open SaaS designed for instant Railway deployments. <br/>
+> This is a special version of Dalisoft designed for instant Railway deployments. <br/>
 > **Do not** use Wasp's built-in deploy commands as it will interfere with your Railway setup.
 
 Watch the [walkthrough video](https://x.com/hot_town/status/1965776467360444643), or follow the guide below to get started.
 
-## Using this Open SaaS x Railway template
+## Using this Dalisoft x Railway template
 
-If you haven't already deployed Open SaaS via the [Railway](https://railway.com/deploy) template directory, you can do so now:
+If you haven't already deployed Dalisoft via the [Railway](https://railway.com/deploy) template directory, you can do so now:
 
-[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/open-saas?referralCode=uA-ZC_)
+[![Deploy on Railway](https://railway.com/button.svg)](https://railway.com/deploy/dalisoft?referralCode=uA-ZC_)
 
 ### Initial Deployment
 
@@ -42,8 +42,8 @@ If you haven't already deployed Open SaaS via the [Railway](https://railway.com/
 <img width="50%" alt="Screenshot 2025-08-19 at 14 26 50" src="https://github.com/user-attachments/assets/c6b2c467-ff10-466d-aba1-e0a5df004eb4" />
 
 - Select your GitHub account and click `Eject Service` to create a new repo in your account.
-- Go to your GitHub repositories, e.g.: `https://github.com/<your-user-name>/open-saas-railway` 
-- Clone this repo to your local machine, e.g.: `git clone https://github.com/<your-user-name>/open-saas-railway.git`
+- Go to your GitHub repositories, e.g.: `https://github.com/<your-user-name>/dalisoft-railway` 
+- Clone this repo to your local machine, e.g.: `git clone https://github.com/<your-user-name>/dalisoft-railway.git`
 
 Now you can start building your SaaS app locally. When you push a new commit to `main`, Railway will automatically deploy your changes! 🚀
 
@@ -53,11 +53,11 @@ Now you can start building your SaaS app locally. When you push a new commit to 
 ```bash
 curl -sSL https://get.wasp.sh/installer.sh | sh
 ```
-Read the [Installation Instructions](https://docs.opensaas.sh/start/getting-started/#install-wasp) for more details (prerequisites, installing on Windows).
+Read the [Installation Instructions](https://docs.dalisoft.sh/start/getting-started/#install-wasp) for more details (prerequisites, installing on Windows).
 
-2️⃣ Start the app by reading the [Getting Started Docs](https://docs.opensaas.sh/start/getting-started/#start-your-db).
+2️⃣ Start the app by reading the [Getting Started Docs](https://docs.dalisoft.sh/start/getting-started/#start-your-db).
 
-3️⃣ Although the app will run, you'll need to set up the integrations to get all its functionality. The [Open SaaS Docs](https://docs.opensaas.sh) contain detailed guides on setting up:
+3️⃣ Although the app will run, you'll need to set up the integrations to get all its functionality. The [Dalisoft Docs](https://docs.dalisoft.sh) contain detailed guides on setting up:
 - Auth,
 - Payments,
 - Analytics,
@@ -66,7 +66,7 @@ Read the [Installation Instructions](https://docs.opensaas.sh/start/getting-star
 - and more. 
 
 > [!WARNING]  
-> Remember that this version of Open SaaS is pre-configured for instant Railway deployments. 
+> Remember that this version of Dalisoft is pre-configured for instant Railway deployments. 
 > Because of this, the deployment features via the Wasp CLI **should not** be used.
 > Just simply push to `main` on your instance's GitHub repo and Railway will automatically deploy your changes! 
 
@@ -89,7 +89,7 @@ The template itself is built on top of some very powerful tools and frameworks, 
 - 🚀 [Astro](https://starlight.astro.build/) - Astro's lightweight "Starlight" template for documentation and blog
 - 💸 [Stripe](https://stripe.com) or [Lemon Squeezy](https://lemonsqueezy.com/) (with Polar.sh and Paddle coming soon!) - for products and payments
 - 💅 [ShadCN UI](https://tailwindcss.com) - for components & styling (plus admin dashboard!)
-- 🤖 [AI-Ready](https://docs.opensaas.sh/) - full set of Cursor rules & llms-full.txt for ai-assisted coding
+- 🤖 [AI-Ready](https://docs.dalisoft.sh/) - full set of Cursor rules & llms-full.txt for ai-assisted coding
 - 📈 [Plausible](https://plausible.io) or [Google](https://analytics.google.com/) Analytics
 - 🤖 [OpenAI](https://openai.com) - OpenAI API w/ function calling example
 - 📦 [AWS S3](https://aws.amazon.com/s3/) - for file uploads
