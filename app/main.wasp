@@ -144,11 +144,6 @@ action updateIsUserAdminById {
   fn: import { updateIsUserAdminById } from "@src/user/operations",
   entities: [User]
 }
-
-action createGuestUser {
-  fn: import { createGuestUser } from "@src/user/operations",
-  entities: [User]
-}
 //#endregion
 
 //#region Demo AI App
