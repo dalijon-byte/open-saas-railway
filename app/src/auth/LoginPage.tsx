@@ -21,9 +21,12 @@ export default function Login() {
         isGuest: true,
       });
       // signup will automatically log in and redirect per onAuthSucceededRedirectTo
-    } catch (error) {
+    } catch (error: any) {
       console.error("Guest signup failed:", error);
-      // Optionally show error to user
+      alert(
+        "Guest signup failed: " + (error?.message || "Unknown error occurred. Please check the console for more details.")
+      ); 
+      // Optionally show error to user 1
     } finally {
       setGuestLoading(false);
     }
