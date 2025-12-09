@@ -3,10 +3,12 @@ import { z } from "zod";
 
 const adminEmails = process.env.ADMIN_EMAILS?.split(",") || [];
 
-const emailDataSchema = z.object({
-  email: z.string(),
-  isGuest: z.boolean().optional().default(false),
-});
+const emailDataSchema = z
+  .object({
+    email: z.string(),
+    isGuest: z.boolean().optional().default(false),
+  })
+  .passthrough();
 
 export const getEmailUserFields = defineUserSignupFields({
   email: (data) => {
